@@ -15,11 +15,14 @@ index_img: /img/canva_loli.jpg
 
 - 一篇比较详细的KDE安装教程：[How to install KDE Plasma on Ubuntu 22.04 Jammy JellyFish](https://linux.how2shout.com/how-to-install-kde-plasma-on-ubuntu-22-04-jammy-jellyfish/ )
 
-- AcherStyx的KDE美化指南：[KDE桌面美化指南 Part1](https://acherstyx.github.io/2020/06/30/KDE%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%8C%87%E5%8D%97/)
+- AcherStyx的KDE美化指南：
 
-  ​                                                [KDE桌面美化指南 Part2](https://acherstyx.github.io/2021/02/20/KDE%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%8C%87%E5%8D%97-2/) 
+  [KDE桌面美化指南 Part1](https://acherstyx.github.io/2020/06/30/KDE%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%8C%87%E5%8D%97/)
+
+   [KDE桌面美化指南 Part2](https://acherstyx.github.io/2021/02/20/KDE%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96%E6%8C%87%E5%8D%97-2/) 
 
 - IITII的KDE美化指南：[KUbuntu20.04 美化](https://iitii.github.io/2020/08/19/1/ )
+
 - THGLG的KDE美化指南：[KDE美化](https://libhitchhiker.eu.org/solution/eyecandy/eyecandy-kde/#%E6%95%88%E6%9E%9C%E9%A2%84%E8%A7%88)
 
 
@@ -60,7 +63,7 @@ sudo apt install kde-full
 
 ### 3. 选择显示管理器
 
-![Select-SSDM-display-manager](/_posts/从零开始的KDE桌面美化/Select-SSDM-display-manager.png)
+![Select-SSDM-display-manager](Select-SSDM-display-manager.png)
 
 gdm3是GNOME的显示管理器，kdm或者sddm适用于KDE. 这里选择sddm.
 
@@ -84,4 +87,8 @@ InputMethod=
 ```
 
 按**ESC**，按**：**键，然后输入**wq**，**ENTER**退出.
+
+
+
+# 开始配置
 
