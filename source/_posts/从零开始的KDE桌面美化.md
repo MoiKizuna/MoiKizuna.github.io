@@ -178,6 +178,8 @@ sudo apt install kvantum qt5-style-kvantum qt5-style-kvantum-l10n qt5-style-kvan
 
 然后在 **外观** / **应用程序风格** 里切换成 **Kvantum** , GTK应用程序风格改为**Mojave-Dark-alt**.
 
+ps: 由于未知原因，设置屏幕缩放为125%时，Dolphin不会变成透明
+
 
 
 ## 桌面Dock和插件配置
@@ -210,3 +212,125 @@ sudo apt install latte-dock
 
 
 
+## Shell配置
+
+### 终端应用程序
+
+终端就使用 Konsole，我觉得挺好用的w
+
+打开终端，设置->管理配置方案
+
+![常规](Konsole1.png)
+
+![字体，大小](Konsole2.png)
+
+![配色方案，透明度](Konsole3.png)
+
+最后取消显示菜单栏，完成.
+
+
+
+### zsh主题和插件配置
+
+#### zsh和oh-my-zsh安装和主题配置
+
+首先安装zsh：
+
+```
+sudo apt install zsh
+```
+
+然后安装oh-my-zsh，详见[官网](https://ohmyz.sh/#install)，或者输入：
+
+```
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+安装后会发现`.zshrc`更新了.
+
+接下来安装zsh的主题，配置一下常用的插件即可。主题推荐使用[powerlevel10k](https://github.com/romkatv/powerlevel10k)，因为我们用的是Oh My Zsh，所以安装方法也用Oh My Zsh对应的方法，引用下项目的README中的安装方法：
+
+> **Oh My Zsh**
+>
+> ```
+> git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+> Copy
+> ```
+>
+> Users in mainland China can use the official mirror on [gitee.com](http://gitee.com/) for faster download.
+> 中国大陆用户可以使用 [gitee.com](http://gitee.com/) 上的官方镜像加速下载.
+>
+> ```
+> git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+> Copy
+> ```
+>
+> Set ZSH_THEME=“powerlevel10k/powerlevel10k” in ~/.zshrc.
+
+安装完成后打开终端即可进入配置页面.
+
+**注意：**root用户和普通用户的`.zshrc`文件不在一起，需要分开配置：
+
+前者在`/root/.zshrc`, 而后者在`/home/username/.zshrc`下.
+
+
+
+#### 配置插件
+
+至于插件，只需要`autojump`, `zsh-autosuggestions`和`zsh-syntax-highlighting`就行，安装方法可以参照另一个博主的[这篇文章](https://www.zrahh.com/archives/167.html).
+
+三个zsh插件功能如下：
+
+- **autojump** 任何位置使用`j xxx`即可跳转到对应的目录，而且不用写全目录名称。前提是这个目录之前访问过，用的时间越久越智能.
+
+  ```
+  sudo apt install autojump
+  ```
+
+  安装完成后，你需要在 `.zshrc` 文件中添加以下内容来激活它：
+
+  ```
+  [[ -s /usr/share/autojump/autojump.zsh ]] && . /usr/share/autojump/autojump.zsh
+  ```
+
+  最后`source`一下，配置完成.
+
+- **zsh-autosuggestions** 会记住之前的命令输入历史，在输入命令时自动显示出过去输入过的命令，按右方向键`>`即可自动填充.
+
+  在 Ubuntu 22.04 中，你可以通过克隆 `zsh-autosuggestions` 的 GitHub 仓库来安装它. 首先，使用以下命令克隆仓库：
+
+  ```
+  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+  ```
+
+  然后在 `.zshrc` 文件中添加以下内容来激活它：
+
+  ```
+  source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+  ```
+
+  最后，重新加载 `.zshrc` 文件或者重新打开终端窗口即可使用 `zsh-autosuggestions`. 当你输入命令时，你会看到一个灰色的补全建议出现在光标后面。你可以通过设置 `ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE` 变量来更改建议的样式.
+
+- **zsh-syntax-highlighting** 会给输入的命令高亮，输错了的命令会显示成红色。
+
+  首先，克隆仓库：
+
+  ```
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+  ```
+
+  在 `.zshrc` 文件中添加以下内容来激活它：
+
+  ```
+  source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  ```
+
+  最后，重新加载 `.zshrc` 文件或者重新打开终端窗口即可.
+
+  ![zsh插件预览](zsh.png)
+
+  
+  
+  
+  
+  至此配置结束，之后随缘更新~
