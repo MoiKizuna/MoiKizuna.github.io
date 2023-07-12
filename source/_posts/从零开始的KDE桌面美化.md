@@ -1,7 +1,7 @@
 ---
 title: 从零开始的KDE桌面美化
 date: 2023-06-28 23:57:28
-updated: 2023-06-29 14:06:28
+updated: 2023-07-12 14:11:28
 tags: [linux-themes]
 index_img: /img/canva_loli.jpg
 ---
@@ -279,6 +279,8 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 至于插件，只需要`autojump`, `zsh-autosuggestions`和`zsh-syntax-highlighting`就行，安装方法可以参照另一个博主的[这篇文章](https://www.zrahh.com/archives/167.html).
 
+
+
 三个zsh插件功能如下：
 
 - **autojump** 任何位置使用`j xxx`即可跳转到对应的目录，而且不用写全目录名称。前提是这个目录之前访问过，用的时间越久越智能.
@@ -295,6 +297,8 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
   最后`source`一下，配置完成.
 
+  
+
 - **zsh-autosuggestions** 会记住之前的命令输入历史，在输入命令时自动显示出过去输入过的命令，按右方向键`>`即可自动填充.
 
   在 Ubuntu 22.04 中，你可以通过克隆 `zsh-autosuggestions` 的 GitHub 仓库来安装它. 首先，使用以下命令克隆仓库：
@@ -310,6 +314,8 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
   ```
 
   最后，重新加载 `.zshrc` 文件或者重新打开终端窗口即可使用 `zsh-autosuggestions`. 当你输入命令时，你会看到一个灰色的补全建议出现在光标后面。你可以通过设置 `ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE` 变量来更改建议的样式.
+
+  
 
 - **zsh-syntax-highlighting** 会给输入的命令高亮，输错了的命令会显示成红色。
 
