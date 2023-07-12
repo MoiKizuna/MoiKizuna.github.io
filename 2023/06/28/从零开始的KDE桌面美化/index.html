@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          3.2k 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          11 分钟
+          27 分钟
         
       </span>
     
@@ -340,6 +340,7 @@
 <p>将下载下来的<code>tar.xz</code>压缩包解压，然后打开Kvantum Manager，选择这一个文件夹，安装主题.</p>
 <p><img src="/2023/06/28/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84KDE%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/Kvantum%E9%85%8D%E7%BD%AE.png" srcset="/img/loading.gif" lazyload alt="Kvantum配置"></p>
 <p>然后在 <strong>外观</strong> &#x2F; <strong>应用程序风格</strong> 里切换成 <strong>Kvantum</strong> , GTK应用程序风格改为<strong>Mojave-Dark-alt</strong>.</p>
+<p>ps: 由于未知原因，设置屏幕缩放为125%时，Dolphin不会变成透明</p>
 <h2 id="桌面Dock和插件配置"><a href="#桌面Dock和插件配置" class="headerlink" title="桌面Dock和插件配置"></a>桌面Dock和插件配置</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">sudo apt <span class="hljs-keyword">install</span> latte-dock<br></code></pre></td></tr></table></figure>
 
 <p>安装完成之后 <strong>右键</strong> ， <strong>编辑停靠栏</strong> ，<strong>高级</strong> </p>
@@ -348,6 +349,64 @@
 <h4 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h4><p><img src="/2023/06/28/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84KDE%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/latte.png" srcset="/img/loading.gif" lazyload alt="latte"></p>
 <h2 id="顶栏"><a href="#顶栏" class="headerlink" title="顶栏"></a>顶栏</h2><p><img src="/2023/06/28/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84KDE%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/top.png" srcset="/img/loading.gif" lazyload alt="topline"></p>
 <p>面板高度： <strong>38</strong></p>
+<h2 id="Shell配置"><a href="#Shell配置" class="headerlink" title="Shell配置"></a>Shell配置</h2><h3 id="终端应用程序"><a href="#终端应用程序" class="headerlink" title="终端应用程序"></a>终端应用程序</h3><p>终端就使用 Konsole，我觉得挺好用的w</p>
+<p>打开终端，设置-&gt;管理配置方案</p>
+<p><img src="/2023/06/28/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84KDE%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/Konsole1.png" srcset="/img/loading.gif" lazyload alt="常规"></p>
+<p><img src="/2023/06/28/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84KDE%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/Konsole2.png" srcset="/img/loading.gif" lazyload alt="字体，大小"></p>
+<p><img src="/2023/06/28/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84KDE%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/Konsole3.png" srcset="/img/loading.gif" lazyload alt="配色方案，透明度"></p>
+<p>最后取消显示菜单栏，完成.</p>
+<h3 id="zsh主题和插件配置"><a href="#zsh主题和插件配置" class="headerlink" title="zsh主题和插件配置"></a>zsh主题和插件配置</h3><h4 id="zsh和oh-my-zsh安装和主题配置"><a href="#zsh和oh-my-zsh安装和主题配置" class="headerlink" title="zsh和oh-my-zsh安装和主题配置"></a>zsh和oh-my-zsh安装和主题配置</h4><p>首先安装zsh：</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">sudo apt <span class="hljs-keyword">install</span> zsh<br></code></pre></td></tr></table></figure>
+
+<p>然后安装oh-my-zsh，详见<a target="_blank" rel="noopener" href="https://ohmyz.sh/#install">官网</a>，或者输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>安装后会发现<code>.zshrc</code>更新了.</p>
+<p>接下来安装zsh的主题，配置一下常用的插件即可。主题推荐使用<a target="_blank" rel="noopener" href="https://github.com/romkatv/powerlevel10k">powerlevel10k</a>，因为我们用的是Oh My Zsh，所以安装方法也用Oh My Zsh对应的方法，引用下项目的README中的安装方法：</p>
+<blockquote>
+<p><strong>Oh My Zsh</strong></p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">git clone --depth=<span class="hljs-number">1</span> https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/romkatv/</span>powerlevel10k.git <span class="hljs-variable">$&#123;ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom&#125;</span><span class="hljs-regexp">/themes/</span>powerlevel10k<br>Copy<br></code></pre></td></tr></table></figure>
+
+<p>Users in mainland China can use the official mirror on <a target="_blank" rel="noopener" href="http://gitee.com/">gitee.com</a> for faster download.<br>中国大陆用户可以使用 <a target="_blank" rel="noopener" href="http://gitee.com/">gitee.com</a> 上的官方镜像加速下载.</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">git clone --depth=<span class="hljs-number">1</span> https:<span class="hljs-regexp">//gi</span>tee.com<span class="hljs-regexp">/romkatv/</span>powerlevel10k.git <span class="hljs-variable">$&#123;ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom&#125;</span><span class="hljs-regexp">/themes/</span>powerlevel10k<br>Copy<br></code></pre></td></tr></table></figure>
+
+<p>Set ZSH_THEME&#x3D;“powerlevel10k&#x2F;powerlevel10k” in ~&#x2F;.zshrc.</p>
+</blockquote>
+<p>安装完成后打开终端即可进入配置页面.</p>
+<p><strong>注意：</strong>root用户和普通用户的<code>.zshrc</code>文件不在一起，需要分开配置：</p>
+<p>前者在<code>/root/.zshrc</code>, 而后者在<code>/home/username/.zshrc</code>下.</p>
+<h4 id="配置插件"><a href="#配置插件" class="headerlink" title="配置插件"></a>配置插件</h4><p>至于插件，只需要<code>autojump</code>, <code>zsh-autosuggestions</code>和<code>zsh-syntax-highlighting</code>就行，安装方法可以参照另一个博主的<a target="_blank" rel="noopener" href="https://www.zrahh.com/archives/167.html">这篇文章</a>.</p>
+<p>三个zsh插件功能如下：</p>
+<ul>
+<li><p><strong>autojump</strong> 任何位置使用<code>j xxx</code>即可跳转到对应的目录，而且不用写全目录名称。前提是这个目录之前访问过，用的时间越久越智能.</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs angelscript">sudo apt install <span class="hljs-built_in">auto</span>jump<br></code></pre></td></tr></table></figure>
+
+<p>安装完成后，你需要在 <code>.zshrc</code> 文件中添加以下内容来激活它：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">[[ -s <span class="hljs-regexp">/usr/</span>share<span class="hljs-regexp">/autojump/</span>autojump.zsh ]] &amp;&amp; . <span class="hljs-regexp">/usr/</span>share<span class="hljs-regexp">/autojump/</span>autojump.zsh<br></code></pre></td></tr></table></figure>
+
+<p>最后<code>source</code>一下，配置完成.</p>
+</li>
+<li><p><strong>zsh-autosuggestions</strong> 会记住之前的命令输入历史，在输入命令时自动显示出过去输入过的命令，按右方向键<code>&gt;</code>即可自动填充.</p>
+<p>在 Ubuntu 22.04 中，你可以通过克隆 <code>zsh-autosuggestions</code> 的 GitHub 仓库来安装它. 首先，使用以下命令克隆仓库：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">git clone https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/zsh-users/</span>zsh-autosuggestions ~<span class="hljs-regexp">/.zsh/</span>zsh-autosuggestions<br></code></pre></td></tr></table></figure>
+
+<p>然后在 <code>.zshrc</code> 文件中添加以下内容来激活它：</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gradle"><span class="hljs-keyword">source</span> ~<span class="hljs-regexp">/.zsh/</span>zsh-autosuggestions/zsh-autosuggestions.zsh<br></code></pre></td></tr></table></figure>
+
+<p>最后，重新加载 <code>.zshrc</code> 文件或者重新打开终端窗口即可使用 <code>zsh-autosuggestions</code>. 当你输入命令时，你会看到一个灰色的补全建议出现在光标后面。你可以通过设置 <code>ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE</code> 变量来更改建议的样式.</p>
+</li>
+<li><p><strong>zsh-syntax-highlighting</strong> 会给输入的命令高亮，输错了的命令会显示成红色。</p>
+<p>首先，克隆仓库：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">git clone https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/zsh-users/</span>zsh-syntax-highlighting.git ~<span class="hljs-regexp">/.zsh/</span>zsh-syntax-highlighting<br></code></pre></td></tr></table></figure>
+
+<p>在 <code>.zshrc</code> 文件中添加以下内容来激活它：</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gradle"><span class="hljs-keyword">source</span> ~<span class="hljs-regexp">/.zsh/</span>zsh-syntax-highlighting/zsh-syntax-highlighting.zsh<br></code></pre></td></tr></table></figure>
+
+<p>最后，重新加载 <code>.zshrc</code> 文件或者重新打开终端窗口即可.</p>
+<p><img src="/2023/06/28/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84KDE%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/zsh.png" srcset="/img/loading.gif" lazyload alt="zsh插件预览"></p>
+<p>至此配置结束，之后随缘更新~</p>
+</li>
+</ul>
 
                 
               </div>
