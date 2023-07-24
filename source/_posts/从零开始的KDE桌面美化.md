@@ -337,6 +337,14 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
   
   
+  ## rEFInd
+  
+  [[经验分享] 一个好用又好看的UEFI启动管理器rEFInd](https://bbs.deepin.org/zh/post/221068)
+  
+  [使用rEFInd来安全启动系统](https://blog.justforlxz.com/2020/09/08/use-refind-to-boot-system/)
+  
+  
+  
   
   
   至此配置结束，之后随缘更新~
